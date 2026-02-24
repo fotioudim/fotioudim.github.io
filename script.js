@@ -27,8 +27,8 @@ const portfolioData = {
         },
     ],
     education: [
-        { degree: "MEng Electrical and Computer Engineering", school: "ECE, National Technical University of Athens", date: "2011 - 2018", desc: "Specialization in Telecommunications and Computer Networks || Diploma thesis on an e2e telemedicine IoT system" },
-        { degree: "MSc, Space Technologies, Applications and Services", school: "DI, National Kapodistrian University of Athens", date: "2021 - 2026", desc: "Specialization in Space Downstream || Master Thesis “Space-Age DevOps: Integrating ESA’s NanoSat MO Framework with Kubernetes for Seamless Satellite Operations”" }
+        { degree: "MEng Electrical and Computer Engineering", school: "ECE, National Technical University of Athens", date: "2011 - 2018", desc: "Specialization in Telecommunications and Computer Networks || Diploma thesis on an <a href='https://dspace.lib.ntua.gr/xmlui/handle/123456789/47987' target='_blank' class='text-link'>e2e telemedicine-fall detection IoT system</a>" },
+        { degree: "MSc, Space Technologies, Applications and Services", school: "DI, National Kapodistrian University of Athens", date: "2021 - 2026", desc: "Specialization in Space Downstream || Master Thesis <a href='https://pergamos.lib.uoa.gr/uoa/dl/object/5322280' target='_blank' class='text-link'>“Space-Age DevOps: Integrating ESA’s NanoSat MO Framework with Kubernetes for Seamless Satellite Operations”</a>" }
     ],
     certifications: [
         { title: "Certified Kubernetes Application Developer (CKAD)", desc: "Cloud Native Computing Foundation (CNCF) certification verifying the ability to design, build, configure, and expose cloud-native applications for Kubernetes.", date: "Issued: Aug 2025" },
@@ -333,4 +333,5 @@ const backToTopBtn = document.getElementById("backToTop");
 window.onscroll = () => backToTopBtn.classList.toggle("show", document.documentElement.scrollTop > 400);
 
 renderUI();
+
 initTerminal();
