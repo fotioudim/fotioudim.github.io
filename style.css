@@ -182,6 +182,20 @@ section { padding: 100px 0 40px; }
 
 footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--border-color); font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-muted); }
 
+/* Inline Text Links */
+.text-link {
+    color: var(--sys-blue);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--sys-blue);
+    transition: var(--transition);
+    font-weight: 600;
+}
+.text-link:hover {
+    color: var(--sys-green);
+    border-bottom-color: var(--sys-green);
+    background-color: rgba(52, 211, 153, 0.1);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .nav-links { display: none; }
@@ -190,4 +204,5 @@ footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--border
     
     /* Add this line to stack the skills on mobile */
     .skills-grid { grid-template-columns: 1fr; } 
+
 }
