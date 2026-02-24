@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimitris Fotiou | Senior Software Engineer</title>
+    <link rel="icon" href="favicon-192x192.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<nav>
+        <div class="logo">~/dfotiou</div>
+        <ul class="nav-links">
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="hero">
+        <div class="container">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <span class="mac-btn close"></span>
+                    <span class="mac-btn minimize"></span>
+                    <span class="mac-btn expand"></span>
+                    <span class="terminal-title">bash -- ~/architecture/profile</span>
+                </div>
+                <div class="terminal-body interactive-term" id="terminal-body" onclick="document.getElementById('cmd-input').focus()">
+                    <div id="output-container">
+                        </div>
+                    <div class="input-line">
+                        <span class="prompt" id="current-prompt">sysadmin@host:~$</span>
+                        <input type="text" id="cmd-input" autocomplete="off" spellcheck="false" autofocus>
+                    </div>
+                </div>
+            </div>
+            <a href="#experience" class="btn">cd ./experience</a>
+        </div>
+    </header>
+
+    <section id="experience">
+        <div class="container">
+            <h2 class="sys-heading"><span class="dir">~/portfolio/</span>experience/</h2>
+            <div class="timeline" id="experience-container"></div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2 class="sys-heading"><span class="dir">~/portfolio/</span>skills/</h2>
+            <div class="skills-grid" id="skills-container"></div>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <h2 class="sys-heading"><span class="dir">~/portfolio/</span>education/</h2>
+            <div class="timeline" id="education-container"></div>
+        </div>
+    </section>
+
+    <section id="certifications">
+        <div class="container">
+            <h2 class="sys-heading"><span class="dir">~/portfolio/</span>certifications/</h2>
+            <div class="project-grid" id="certifications-container"></div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2 class="sys-heading"><span class="dir">~/portfolio/</span>projects/</h2>
+            <div class="project-grid" id="projects-container"></div>
+        </div>
+    </section>
+
+    <section id="personal">
+        <div class="container">
+            <div class="split-layout">
+                <div class="split-col">
+                    <h2 class="sys-heading"><span class="dir">~/portfolio/</span>languages/</h2>
+                    <ul class="sys-list" id="languages-container"></ul>
+                </div>
+                <div class="split-col">
+                    <h2 class="sys-heading"><span class="dir">~/portfolio/</span>hobbies/</h2>
+                    <ul class="sys-list" id="hobbies-container"></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="terminal-window small-terminal">
+                <div class="terminal-header">
+                    <span class="mac-btn close"></span><span class="mac-btn minimize"></span><span class="mac-btn expand"></span>
+                </div>
+                <div class="terminal-body text-center">
+                    <h2>$ shutdown -h now</h2>
+                    <p>Feel free to contact me! I always like feedback and new ideas from people with fresh minds.</p>
+                    
+                    <div class="social-links large-icons">
+                        <a href="https://www.linkedin.com/in/dimitris-fotiou/" target="_blank" aria-label="LinkedIn" class="social-btn linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://github.com/fotioudim" target="_blank" aria-label="GitHub" class="social-btn github"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://stackoverflow.com/users/11680294/dfotiou" target="_blank" aria-label="StackOverflow" class="social-btn stackoverflow"><i class="fa-brands fa-stack-overflow"></i></a>
+                        <a href="https://x.com/d_fotiou" target="_blank" aria-label="X" class="social-btn x-corp"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                    <a href="mailto:dfotiou.tech@gmail.com" class="btn">initiate_contact.sh</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>syslog: Portolio updated on 2026-02-22 | &copy; Dimitris Fotiou</p>
+    </footer>
+
+    <a href="#hero" id="backToTop" class="back-to-top" title="Go to top"><i class="fa-solid fa-arrow-up"></i></a>
+
+    <script src="script.js"></script>
+</body>
+</html>
