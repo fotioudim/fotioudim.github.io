@@ -68,6 +68,16 @@ nav {
 .nav-links a { color: var(--text-primary); text-decoration: none; transition: var(--transition); }
 .nav-links a:hover { color: var(--sys-blue); }
 
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    color: var(--sys-blue);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.hamburger:hover { color: var(--sys-green); }
+
 /* Buttons */
 .btn {
     display: inline-block;
@@ -207,7 +217,6 @@ footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--border
 
 /* Responsive */
 @media (max-width: 768px) {
-    .nav-links { display: none; }
     .sys-heading { font-size: 1.4rem; }
     .split-layout { grid-template-columns: 1fr; gap: 30px; }
     
@@ -229,4 +238,37 @@ footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--border
     }
     
     #cmd-input { font-size: 0.85rem; }
+
+    .hamburger { 
+        display: block; 
+    }
+    
+    .nav-links {
+        position: absolute;
+        top: 70px; 
+        left: 0;
+        width: 100%;
+        background-color: rgba(10, 14, 23, 0.98); 
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        text-align: center;
+        border-bottom: 1px solid var(--border-color);
+        padding: 20px 0;
+        
+        transform: translateY(-150%);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .nav-links.nav-active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .nav-links li { 
+        margin: 15px 0; 
+        font-size: 1.1rem; 
+    }
 }
