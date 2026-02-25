@@ -129,9 +129,9 @@ const terminalBody = document.getElementById("terminal-body");
 
 function initTerminal() {
     outputContainer.innerHTML = `
-        <p><span class="prompt">dfotiou@host:~$</span> whoami</p>
+        <p><span class="prompt">dfotiou@node-01:~$</span> whoami</p>
         <p class="output text-highlight">Dimitris Fotiou - Senior Software Engineer</p>
-        <p><span class="prompt">dfotiou@host:~$</span> cat portfolio/role.config</p>
+        <p><span class="prompt">dfotiou@node-01:~$</span> cat portfolio/role.config</p>
         <p class="output text-highlight">${portfolioData.role}</p>
         <p class="output text-muted" style="margin-top: 20px;">Type <span class="sys-green">'help'</span> to see available commands. Try exploring the file system!</p>
     `;
@@ -176,7 +176,7 @@ function getNodeByPathArray(pathArray) {
 
 function updatePrompt() {
     const pathStr = currentPath.length === 0 ? "~" : "~/" + currentPath.join("/");
-    const promptStr = `dfotiou@host:${pathStr}$`;
+    const promptStr = `dfotiou@node-01:${pathStr}$`;
     currentPrompt.innerText = promptStr;
     return promptStr;
 }
@@ -197,7 +197,7 @@ function processCommand(cmdLine) {
         case "help":
             printOutput("Available commands: <br><span class='sys-blue'>ls</span> [dir], <span class='sys-blue'>cd</span> &lt;dir&gt;, <span class='sys-blue'>cat</span> &lt;file&gt;, <span class='sys-blue'>pwd</span>, <span class='sys-blue'>whoami</span>, <span class='sys-blue'>clear</span>");
             break;
-        case "whoami": printOutput("Your Name - Software Architect"); break;
+        case "whoami": printOutput("Dimitris Fotiou - Senior Software Engineer"); break;
         case "pwd": printOutput(currentPath.length === 0 ? "/home/dfotiou" : "/home/dfotiou/" + currentPath.join("/")); break;
         case "clear": outputContainer.innerHTML = ""; break;
         case "ls":
