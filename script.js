@@ -335,3 +335,31 @@ window.onscroll = () => backToTopBtn.classList.toggle("show", document.documentE
 renderUI();
 
 initTerminal();
+
+// =========================================================
+// 5. MOBILE HAMBURGER MENU
+// =========================================================
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+const navItems = document.querySelectorAll('.nav-links li a');
+
+hamburger.addEventListener('click', () => {
+    // Toggle the menu visibility
+    navLinks.classList.toggle('nav-active');
+    
+    // Swap the icon between 'bars' and 'xmark'
+    const icon = hamburger.querySelector('i');
+    if (icon.classList.contains('fa-bars')) {
+        icon.classList.replace('fa-bars', 'fa-xmark');
+    } else {
+        icon.classList.replace('fa-xmark', 'fa-bars');
+    }
+});
+
+// Close the menu automatically when a link is clicked
+navItems.forEach(item => {
+    item.addEventListener('click', () => {
+        navLinks.classList.remove('nav-active');
+        hamburger.querySelector('i').classList.replace('fa-xmark', 'fa-bars');
+    });
+});
