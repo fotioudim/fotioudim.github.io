@@ -2,7 +2,7 @@
 // 1. SINGLE SOURCE OF TRUTH (Data layer)
 // =========================================================
 const portfolioData = {
-    role: "Software engineer with a strong technical background and a passion for solving complex challenges. Collaborative team player dedicated to building cutting-edge, scalable applications, architectures, and infrastructure. Always eager to learn, grow, and contribute to impactful projects.",
+    role: "Software engineer dedicated to building cutting-edge, scalable applications, architectures, and infrastructure. A collaborative problem-solver, always eager to learn and contribute to impactful projects.",
     skills: {
         "Cloud & DevOps": ["Kubernetes", "Docker", "Terraform", "Jenkins", "CI/CD"],
         "Software Engineering": ["Microservices", "Event-Driven Architecture", "Domain-Driven Design", "REST/gRPC/SOAP/Netconf", "Object-Oriented Programming (OOP)", "Java", "Quarkus", "Linux", "Javascript", "Apache Kafka", "Node.js", "MongoDb", "MariaDb", "Python", "Springboot", "Osgi", "C#", ".Net", "ReactJs", "MySQL", "Git", "C"],
@@ -133,7 +133,7 @@ function initTerminal() {
         <p class="output text-highlight">Dimitris Fotiou - Senior Software Engineer</p>
         <p><span class="prompt">dfotiou@node-01:~$</span> cat portfolio/role.config</p>
         <p class="output text-highlight">${portfolioData.role}</p>
-        <p class="output text-muted" style="margin-top: 20px;">Type <span class="sys-green">'help'</span> to see available commands. Try exploring the file system!</p>
+        <p class="output text-muted" style="margin-top: 20px;">Type <span class="sys-green">'help'</span> to see available commands.</p>
     `;
 }
 
