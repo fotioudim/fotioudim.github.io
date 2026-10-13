@@ -48,6 +48,9 @@ const portfolioData = {
         { title: "GoogleEarthEngine-Green-Spaces-in-Athens", desc: "Study about Urban Green Spaces in Athens GR, using the Google Earth Engine platform, along with Landsat 8 and 9 imagery and Random Forest supervised machine learning algorithms.", stack: ["Javascript", "Google Earth Engine", "Random forest ML algorithm"], link: "https://github.com/fotioudim/GoogleEarthEngine-Green-Spaces-in-Athens" },
         { title: "Google-Earth-Engine-environmental-projects", desc: "A repository to showcase environmental projects implemented with Google Earth Engine platform, Javascript and machine learning algorithms.", stack: ["Javascript", "Google Earth Engine"], link: "https://github.com/fotioudim/Google-Earth-Engine-environmental-projects" }
     ],
+    publications: [
+        { title: "Towards Space-Age DevOps: Orchestrating Microservices On-board within ESA’s NanoSat MO Framework", authors: "Dimitris Fotiou, Nikos Fotiou, Timo Kehrer, Christos Tsigkanos", conference: "European Conference on Software Architecture (ECSA)", publisher: "Springer (Lecture Notes in Computer Science)", date: "October 2026", url: "https://link.springer.com/chapter/10.1007/978-3-032-39236-7_41" }
+    ],
     languages: ["English (Fluent / C2)", "Greek (Native)", "German (Upper Intermediate / B2)"],
     hobbies: ["Travelling", "Trekking", "Music", "Traditional dances"]
 };
@@ -81,6 +84,16 @@ function renderUI() {
         projectsContainer.innerHTML += `<div class="project-card"><h3>[ ${proj.title} ]</h3><p>${proj.desc}</p><div class="tech-stack">${proj.stack.map(t => `<span>${t}</span>`).join('')}</div><a href="${proj.link}" class="project-link">View Repo &rarr;</a></div>`;
     });
 
+    const publicationsContainer = document.getElementById("publications-container");
+    portfolioData.publications.forEach(pub => {
+        publicationsContainer.innerHTML += `<div class="project-card">
+            <h3>[ ${pub.title} ]</h3>
+            <p><strong>Authors:</strong> ${pub.authors}</p>
+            <p><strong>Published in:</strong> ${pub.conference} | ${pub.publisher}</p>
+            <span class="date">${pub.date}</span>
+            <a href="${pub.url}" target="_blank" class="project-link">Read Paper &rarr;</a>
+        </div>`;
+    });
     const langContainer = document.getElementById("languages-container");
     portfolioData.languages.forEach(lang => langContainer.innerHTML += `<li><span class="list-icon">❯</span> ${lang}</li>`);
     
@@ -103,6 +116,7 @@ const fileSystem = {
             "experience.md": { type: "file", text: experienceMD },
             "education.json": { type: "file", text: JSON.stringify(portfolioData.education, null, 2) },
             "certifications.json": { type: "file", text: JSON.stringify(portfolioData.certifications, null, 2) },
+            "publications.json": { type: "file", text: JSON.stringify(portfolioData.publications, null, 2) },
             "hobbies.txt": { type: "file", text: portfolioData.hobbies.map(h => `- ${h}`).join("\n") },
             "languages.json": { type: "file", text: JSON.stringify(portfolioData.languages, null, 2) },
             "projects": {
